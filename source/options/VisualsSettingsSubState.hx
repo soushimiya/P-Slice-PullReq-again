@@ -60,6 +60,21 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			addOption(option);
 		}
 
+		var holdSkins:Array<String> = Mods.mergeAllTextsNamed('images/holdCovers/list.txt');
+		if(holdSkins.length > 0)
+		{
+			if(!holdSkins.contains(ClientPrefs.data.holdSkin))
+				ClientPrefs.data.holdSkin = ClientPrefs.defaultData.holdSkin; //Reset to default if saved splashskin couldnt be found
+
+			holdSkins.insert(0, ClientPrefs.defaultData.holdSkin); //Default skin always comes first
+			var option:Option = new Option('Note Splashes:',
+				"Select your prefered Note Splash variation or turn it off.",
+				'holdSkin',
+				STRING,
+				holdSkins);
+			addOption(option);
+		}
+
 		var option:Option = new Option('Note Splash Opacity',
 			'How much transparent should the Note Splashes be.',
 			'splashAlpha',
@@ -112,6 +127,12 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 		option.changeValue = 0.1;
 		option.decimals = 1;
 		addOption(option);
+
+		var option:Option = new Option('Smooth Health Bar',
+			'If enabled makes health bar move more smoothly',
+			'vsliceSmoothBar',
+			'bool');
+		addOption(option);
 		
 		#if !mobile
 		var option:Option = new Option('FPS Counter',
@@ -150,6 +171,12 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			"If unchecked, Ratings and Combo won't stack, saving on System Memory and making them easier to read",
 			'comboStacking',
 			BOOL);
+		addOption(option);
+
+		var option:Option = new Option('Freeplay Dynamic Coloring',
+		'Enables dynamic freeplay background color. Disable this if you prefer original V-slice freeplay menu colors',
+		'vsliceFreeplayColors',
+		'bool');
 		addOption(option);
 
 		super();

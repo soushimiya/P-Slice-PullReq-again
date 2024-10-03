@@ -113,6 +113,12 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 
+		var option:Option = new Option('Use results screen',
+		'If disabled will skip showing the result screen',
+		'vsliceResults',
+		'bool');
+		addOption(option);
+
 		super();
 	}
 
