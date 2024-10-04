@@ -54,12 +54,11 @@ It's meant to bring new visuals from newer versions and make changes to the exis
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Features
+## Features
 * V-Slice's freeplay menu (with support for freeplay colors)
 ![Freeplay Menu With Color](art/docs/freeplay.png)
 * Results screen
 ![alt text](art/docs/result.png)
-* Sticker transition (customisable via Lua scripts)
 * A few smaller features from V-Slice
 * Erect remixes
 #### custom stickers
