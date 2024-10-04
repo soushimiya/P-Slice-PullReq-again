@@ -104,8 +104,9 @@ After installing git, it is RECOMMENDED that you open up a command prompt window
 vs_Community.exe --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows10SDK.19041 -p
   ```
 
-1. head into the setup folder located in the root directory of this repository, and execute the ```Windows.bat``` file.
-3. Run
+head into the setup folder located in the root directory of this repository, and execute the ```Windows.bat``` file.
+
+Run
    ```sh
    lime test <platform>
    ```
